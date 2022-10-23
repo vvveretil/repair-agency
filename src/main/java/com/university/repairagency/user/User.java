@@ -3,11 +3,9 @@ package com.university.repairagency.user;
 import com.university.repairagency.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.CollectionTable;
@@ -21,7 +19,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +41,6 @@ public class User implements UserDetails {
 
     private String firstName;
     private String lastName;
-    private String patronymic;
 
     private boolean isAccountNonExpired = true;
     private boolean isAccountNonLocked = true;

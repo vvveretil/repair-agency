@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"/>
     <!-- Font Awesome -->
     <link
             rel="stylesheet"
@@ -18,45 +18,55 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mdb.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<div class="container">
-    <form method="post" th:action="@{/login}" class="mb-4 form">
+<header th:insert="fragments/header.html :: header"></header>
 
-        <div class="alert-danger" th:if="${#bools.isTrue(error)}">Invalid username or password</div>
-        <div class="alert-info" th:if="${#bools.isTrue(logout)}">Logged out successfully</div>
+<form method="post" th:action="@{/login}" class="mb-4 form">
 
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <input type="email" id="username" name="username" class="form-control" />
-            <label class="form-label" for="username">Email address</label>
-        </div>
+    <div class="alert-danger login-alert" th:if="${#bools.isTrue(error)}">Invalid username or password</div>
+    <div class="alert-info login-alert" th:if="${#bools.isTrue(logout)}">Logged out successfully</div>
 
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <input type="password" id="password" name="password" class="form-control" />
-            <label class="form-label" for="password">Password</label>
-        </div>
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="username" name="username" class="form-control"/>
+        <label class="form-label" for="username">Email address</label>
+    </div>
 
-        <!-- 2 column grid layout for inline styling -->
-        <div class="row mb-4 text-center">
-            <div class="col">
-                <a href="/registration">Sign up</a>
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="password" name="password" class="form-control"/>
+        <label class="form-label" for="password">Password</label>
+    </div>
 
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked/>
+                <label class="form-check-label" for="form2Example34"> Remember me </label>
             </div>
-
-            <div class="col">
-                <a href="#">Forgot password?</a>
-            </div>
         </div>
 
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-    </form>
-</div>
+        <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+        <p>Not a member? <a href="/registration">Register</a></p>
+
+    </div>
+</form>
 
 <!-- MDB -->
 <script type="text/javascript" src="js/mdb.min.js"></script>

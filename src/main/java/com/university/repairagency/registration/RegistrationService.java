@@ -34,7 +34,6 @@ public class RegistrationService {
                 .username(registrationRequest.getUsername())
                 .firstName(registrationRequest.getFirstName())
                 .lastName(registrationRequest.getLastName())
-                .patronymic(registrationRequest.getPatronymic())
                 .password(registrationRequest.getPassword())
                 .isAccountNonExpired(true)
                 .isAccountNonLocked(true)
@@ -42,5 +41,4 @@ public class RegistrationService {
                 .isEnabled(true)
                 .build();
     }
-
 }

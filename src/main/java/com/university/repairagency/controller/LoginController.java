@@ -1,5 +1,6 @@
-package com.university.repairagency.login;
+package com.university.repairagency.controller;
 
+import com.university.repairagency.config.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,6 @@ public class LoginController {
                                Model model) {
         model.addAttribute("error", error != null);
         model.addAttribute("logout", logout != null);
-        return "login";
+        return Page.LOGIN;
     }
 }

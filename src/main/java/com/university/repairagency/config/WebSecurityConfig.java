@@ -2,7 +2,6 @@ package com.university.repairagency.config;
 
 import com.university.repairagency.role.Role;
 import com.university.repairagency.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

@@ -9,11 +9,11 @@ import lombok.ToString;
 @ToString
 public class RegistrationRequest {
 
-    private String username;
-    private String password;
-    private String matchingPassword;
     private String firstName;
     private String lastName;
-    private String patronymic;
 
+    private String username;
+
+    private String password;
+    private String matchingPassword;
 }

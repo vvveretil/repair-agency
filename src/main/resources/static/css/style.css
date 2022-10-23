@@ -7,6 +7,11 @@
     transform: translate(-50%, -50%)
 }
 
+.login-alert{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 .error{
     font-size: 14px;
     font-weight: 600;
